@@ -58,17 +58,11 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
-	// document.querySelector('.key').setAttribute('style', 'borderColor: #ffc600; box-shadow: 0 0 1rem #ffc600; transform: scale(1.1);');
 	
 	document.querySelector('.key').addEventListener('click', function(){
-		document.querySelector('.key').setAttribute('style', 'borderColor: #ffc600; box-shadow: 0 0 1rem #ffc600; transform: scale(1.1);');
+		this.classList.add('playing');
 	}, false);
-			
-//	var firstDrum = document.querySelector('.key');
-//	console.log(firstDrum);
-//	firstDrum.click(function() {
-//		firstDrum.setAttribute('style', 'borderColor: #ffc600; box-shadow: 0 0 1rem #ffc600; transform: scale(1.1);');
-//	})
+
 </script>
 
 
