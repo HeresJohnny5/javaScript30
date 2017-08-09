@@ -58,13 +58,14 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
+	var drums = document.querySelectorAll('.key');
 	
-	document.querySelector('.key').addEventListener('click', function(){
-		this.classList.add('playing');
-	}, false);
-
+	for(var i = 0; i < drums.length; i++) {
+		drums[i].addEventListener('click', function() {
+			this.classList.add('playing');
+		}, false)
+	}
 </script>
-
 
 </body>
 </html>
