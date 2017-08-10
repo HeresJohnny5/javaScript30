@@ -58,13 +58,19 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
-	var drums = document.querySelectorAll('.key');
-	
-	for(var i = 0; i < drums.length; i++) {
-		drums[i].addEventListener('click', function() {
-			this.classList.toggle('playing');
-		})
-	}
+	window.addEventListener('keydown', function(e) {
+		const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+		if(!audio) return; // stop function from running altogether
+		audio.currentTime = 0; // rewind to the start
+		audio.play();
+	})
+//	var drums = document.querySelectorAll('.key');
+//	
+//	for(var i = 0; i < drums.length; i++) {
+//		drums[i].addEventListener('click', function() {
+//			this.classList.toggle('playing');
+//		})
+//	}
 </script>
 
 </body>
